@@ -45,8 +45,6 @@ bool Game::init()
   loadTexture(passports[1], "../Data/Critter Crossing Customs/moose passport.png");
   loadTexture(passports[2], "../Data/Critter Crossing Customs/penguin passport.png");
 
-  character_box.setFillColor(sf::Color(100, 240, 0, 100));
-
   if (!font.loadFromFile("../Data/Fonts/open-sans/OpenSans-Semibold.ttf"))
     printf("font failed to load");
 
@@ -103,7 +101,6 @@ void Game::render()
     window.draw(score_text);
     window.draw(lives_text);
     window.draw(*character);
-    window.draw(character_box);
     window.draw(*passport);
     window.draw(accept);
     window.draw(reject);
@@ -209,10 +206,6 @@ void Game::newAnimal()
   passport->setTexture(passports[passport_index]);
   passport->setScale(0.6, 0.6);
   passport->setPosition(window.getSize().x / 2, window.getSize().y / 3);
-
-  character_box.setSize(character->getGlobalBounds().getSize());
-  character_box.setPosition(character->getPosition());
-  
 }
 
 void Game::dragSprite(sf::Sprite* sprite)

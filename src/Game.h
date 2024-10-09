@@ -54,8 +54,6 @@ class Game
 
   bool passport_accepted, passport_rejected, should_accept;
 
-  sf::RectangleShape character_box;
-
   int animal_index, passport_index;
 
   int score = 0;
