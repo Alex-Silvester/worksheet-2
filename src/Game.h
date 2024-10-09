@@ -20,6 +20,8 @@ class Game
   sf::Sprite ball;
   sf::Texture ball_texture;
 
+  int test = 0;
+
 };
 
 #endif // PLATFORMER_GAME_H
